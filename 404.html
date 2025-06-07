@@ -1,18 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>discord.gg/phans</title>
-  <meta property="og:title" content="gatorkeys.xyz" />
-  <meta property="og:description" content="check out this page i guess" />
-  <meta property="og:image" content="https://images.miona.bot/image/331cc61f-f989-45d1-a233-5267e58ec40a.png" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-</head>
-<body>
-  <script>
-    const fullPath = window.location.pathname + window.location.search + window.location.hash;
-    window.location.replace('https://phans.bio' + fullPath);
-  </script>
-</body>
-</html>
+import { NextResponse } from 'next/server'
+import type { NextRequest } from 'next/server'
+
+export function middleware(request: NextRequest) {
+  const path = request.nextUrl.pathname + request.nextUrl.search + request.nextUrl.hash;
+  const response = new NextResponse(`
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <title>discord.gg/phans</title>
+      <meta property="og:title" content="gatorkeys.xyz" />
+      <meta property="og:description" content="check out this page i guess" />
+      <meta property="og:image" content="https://images.miona.bot/image/331cc61f-f989-45d1-a233-5267e58ec40a.png" />
+      <meta property="og:url" content="https://i.am.a.rapist.gatorkeys.xyz${path}" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+    <body>
+      <script>
+        const fullPath = window.location.pathname + window.location.search + window.location.hash;
+        window.location.replace('https://phans.bio' + fullPath);
+      </script>
+    </body>
+    </html>
+  `, {
+    headers: {
+      'Content-Type': 'text/html',
+    },
+  });
+
+  return response;
+}
