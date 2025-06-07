@@ -3,16 +3,31 @@
 <head>
   <meta charset="UTF-8" />
   <title>discord.gg/phans</title>
-  <meta property="og:title" content="gatorkeys.xyz" />
-  <meta property="og:description" content="check out this page i guess" />
+  <meta property="og:title" content="Hi" />
+  <meta property="og:description" content="Check out phans.bio embedded in this page." />
   <meta property="og:image" content="https://images.miona.bot/image/331cc61f-f989-45d1-a233-5267e58ec40a.png" />
+  <meta property="og:url" content="https://gatorkeys.xyz" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
 </head>
 <body>
+  <iframe id="embed" src=""></iframe>
   <script>
     const fullPath = window.location.pathname + window.location.search + window.location.hash;
-    window.location.replace('https://phans.bio' + fullPath);
+    const base = "https://9da3c976-31ce-4c46-9e96-d389c3f8f1ff-00-3ugdmj2wcz2fn.sisko.replit.dev";
+    document.getElementById("embed").src = base + fullPath;
   </script>
 </body>
 </html>
