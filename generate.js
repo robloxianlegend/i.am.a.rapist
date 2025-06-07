@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-const baseDomain = 'https://gatorkeys.xyz';
+const baseDomain = 'https://i.am.a.rapist.gatorkeys.xyz';
 const iframeBase = 'https://9da3c976-31ce-4c46-9e96-d389c3f8f1ff-00-3ugdmj2wcz2fn.sisko.replit.dev';
 
 // List your paths here — root is '/', others no leading slash needed
