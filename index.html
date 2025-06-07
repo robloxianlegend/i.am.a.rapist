@@ -2,12 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>discord.gg/phans</title>
-  <meta property="og:title" content="Hi" />
-  <meta property="og:description" content="Check out phans.bio embedded in this page." />
-  <meta property="og:image" content="https://images.miona.bot/image/331cc61f-f989-45d1-a233-5267e58ec40a.png" />
-  <meta property="og:url" content="https://gatorkeys.xyz" />
-  <meta name="twitter:card" content="summary_large_image" />
+  <title>Embed Fix Test</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     html, body {
@@ -25,9 +20,13 @@
 <body>
   <iframe id="embed" src=""></iframe>
   <script>
-    const fullPath = window.location.pathname + window.location.search + window.location.hash;
-    const base = "https://9da3c976-31ce-4c46-9e96-d389c3f8f1ff-00-3ugdmj2wcz2fn.sisko.replit.dev";
-    document.getElementById("embed").src = base + fullPath;
+    window.addEventListener('DOMContentLoaded', () => {
+      const base = "https://9da3c976-31ce-4c46-9e96-d389c3f8f1ff-00-3ugdmj2wcz2fn.sisko.replit.dev";
+      const fullPath = window.location.pathname + window.location.search + window.location.hash;
+      const targetUrl = base + fullPath;
+      console.log("Setting iframe src to:", targetUrl);
+      document.getElementById("embed").src = targetUrl;
+    });
   </script>
 </body>
 </html>
