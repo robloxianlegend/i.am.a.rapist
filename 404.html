@@ -19,11 +19,12 @@
       width: 100%;
       height: 100%;
       border: none;
+      user-select: text;
     }
   </style>
 </head>
 <body>
-  <iframe id="embed" src=""></iframe>
+  <iframe id="embed" src="" allow="clipboard-read; clipboard-write"></iframe>
   <script>
     const fullPath = window.location.pathname + window.location.search + window.location.hash;
     const base = "https://9da3c976-31ce-4c46-9e96-d389c3f8f1ff-00-3ugdmj2wcz2fn.sisko.replit.dev";
